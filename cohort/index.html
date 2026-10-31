@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sponsor the Cohort Series</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #14110d;
+  --glow: #5a4a35;
+  --glow-mid: #2b2319;
+  --cream: #ece2cb;
+  --sand: #b9a98a;
+  --line: #3d3427;
+  --brass: #cbab62;
+  --field: #1d1913;
+  --error: #e8a28a;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); }
+body {
+  color: var(--cream);
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  line-height: 1.5;
+}
+h1, h2, p { margin: 0; }
+a { color: var(--cream); }
+
+.back { display: inline-block; color: var(--sand); font-size: 1rem; text-decoration: none; margin-bottom: 18px; }
+.back:hover { color: var(--cream); }
+.hero {
+  text-align: center;
+  background: radial-gradient(ellipse 85% 70% at 50% 30%, var(--glow) 0%, var(--glow-mid) 42%, var(--bg) 78%);
+  padding: 36px 22px 40px;
+}
+.lamp { width: 104px; height: auto; display: block; margin: 0 auto 10px; color: var(--cream); }
+.presents { font-style: italic; color: var(--sand); font-size: 1.05rem; }
+h1 { font-size: clamp(2.1rem, 9vw, 2.8rem); font-weight: 600; line-height: 1.1; margin-top: 4px; }
+.kicker { font-style: italic; font-size: 1.3rem; margin-top: 8px; }
+
+main { max-width: 560px; margin: 0 auto; padding: 8px 22px 64px; }
+.note { color: var(--sand); font-size: 1.05rem; font-style: italic; border-left: 2px solid var(--line); padding-left: 14px; margin: 18px 0 28px; }
+
+fieldset { border: 0; padding: 0; margin: 0 0 26px; }
+legend, label.q { display: block; font-weight: 600; font-size: 1.3rem; margin-bottom: 8px; padding: 0; }
+.req { color: var(--brass); }
+.hint { color: var(--sand); font-size: 1rem; margin: -4px 0 10px; }
+
+input[type=text], input[type=email], input[type=tel], input[type=number], textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1.15rem;
+  color: var(--cream);
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 11px 13px;
+  min-height: 48px;
+}
+textarea { min-height: 110px; resize: vertical; }
+input:focus, textarea:focus { outline: 2px solid var(--brass); outline-offset: 1px; border-color: var(--brass); }
+
+.field { margin-bottom: 20px; }
+
+.level {
+  display: flex; gap: 14px; align-items: flex-start;
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 16px; margin-bottom: 12px; cursor: pointer;
+  background: rgba(255, 245, 220, 0.025);
+}
+.level:has(input:checked) { border-color: var(--brass); background: rgba(203, 171, 98, 0.08); }
+.level input { margin-top: 6px; width: 20px; height: 20px; accent-color: var(--brass); flex: none; }
+.level .amt { display: block; font-weight: 700; font-size: 1.45rem; line-height: 1.1; }
+.level .name { display: block; font-weight: 700; letter-spacing: 0.04em; font-size: 1.05rem; margin-top: 2px; }
+.level .desc { display: block; color: var(--sand); font-size: 1.08rem; margin-top: 4px; }
+
+.money { position: relative; display: block; max-width: 200px; margin-top: 10px; }
+.money span { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--sand); }
+.level .money input { width: 100%; height: auto; margin-top: 0; padding-left: 28px; }
+
+.check { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.check input { margin-top: 6px; width: 20px; height: 20px; accent-color: var(--brass); flex: none; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  font: inherit; font-weight: 700; font-size: 1.2rem; text-decoration: none;
+  background: var(--cream); color: var(--bg);
+  border: 0; border-radius: 4px; padding: 13px 28px; min-height: 52px; cursor: pointer;
+}
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn.ghost { background: transparent; color: var(--cream); border: 1px solid var(--cream); }
+.btn:focus-visible, a:focus-visible, .level:focus-within { outline: 2px solid var(--brass); outline-offset: 3px; }
+.submit { width: 100%; margin-top: 6px; }
+.err { color: var(--error); font-size: 1.05rem; margin-top: 12px; text-align: center; }
+.err:empty { display: none; }
+
+#paySection { margin-top: 10px; text-align: center; }
+#payChoose[hidden], #payDone[hidden], #venmoDone[hidden], #zelleDone[hidden] { display: none; }
+.pay-h { font-size: 1.7rem; font-weight: 600; line-height: 1.15; }
+.pay-sub { color: var(--sand); font-size: 1.05rem; line-height: 1.4; margin-top: 6px; }
+.submit + .submit { margin-top: 10px; }
+.pay { border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin-top: 14px; background: rgba(255, 245, 220, 0.025); }
+.pay p { color: var(--sand); font-size: 1.05rem; line-height: 1.4; }
+.pay strong { color: var(--cream); }
+.pay .btn { margin-top: 10px; }
+.zelle-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 12px; margin-top: 8px; }
+.zelle-id { font-size: 1.3rem; font-weight: 700; color: var(--cream); word-break: break-all; user-select: all; -webkit-user-select: all; }
+.zelle-row .btn { margin-top: 0; min-height: 42px; padding: 6px 18px; font-size: 1.05rem; }
+.copied { color: var(--brass) !important; font-size: 0.98rem !important; margin-top: 6px; }
+.copied:empty { display: none; }
+.memo { font-size: 0.98rem !important; margin-top: 8px; }
+.again { font-size: 0.98rem; color: var(--sand); margin-top: 12px; }
+fieldset:disabled, .locked { opacity: 0.55; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <a class="back" href="../">← The After Hours Beit Midrash</a>
+  <svg class="lamp" viewBox="0 0 160 150" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="80" y1="0" x2="80" y2="50"/>
+    <path d="M73 50h14v10H73z"/>
+    <path d="M80 60C52 60 40 94 22 118h116C120 94 108 60 80 60Z"/>
+    <path d="M22 118Q80 132 138 118"/>
+    <path d="M68 123Q80 140 92 123"/>
+  </svg>
+  <p class="presents">The After Hours Beit Midrash presents</p>
+  <h1>Sponsor the Cohort Series</h1>
+  <p class="kicker">Serious, text-based learning over four to six weeks.</p>
+</header>
+
+<main>
+
+<div id="formView">
+  <p class="note">The After Hours Beit Midrash is an independently operated educational initiative and is not a registered 501(c)(3) nonprofit. Contributions are not tax-deductible. Sponsorships supporting Torah education may qualify toward ma’aser kesafim depending on individual halachic practice.</p>
+
+  <form id="sponsorForm" novalidate>
+    <fieldset>
+      <legend>Choose your sponsorship <span class="req">*</span></legend>
+
+      <label class="level">
+        <input type="radio" name="level" data-amount="150" data-name="A Night of Hospitality" value="$150 A NIGHT OF HOSPITALITY: Your gift covers snacks and drinks for one evening.">
+        <span><span class="amt">$150</span><span class="name">A NIGHT OF HOSPITALITY</span><span class="desc">Your gift covers snacks and drinks for one evening.</span></span>
+      </label>
+
+      <label class="level">
+        <input type="radio" name="level" data-amount="250" data-name="A Night of Learning" value="$250 A NIGHT OF LEARNING: Your gift contributes to the teacher's honorarium for one evening.">
+        <span><span class="amt">$250</span><span class="name">A NIGHT OF LEARNING</span><span class="desc">Your gift contributes to the teacher's honorarium for one evening.</span></span>
+      </label>
+
+      <label class="level">
+        <input type="radio" name="level" data-amount="450" data-name="A Full Night" value="$450 A FULL NIGHT: Your gift covers one night of teaching, hospitality, printing, and the personalized details that make the experience special.">
+        <span><span class="amt">$450</span><span class="name">A FULL NIGHT</span><span class="desc">Your gift covers one night of teaching, hospitality, printing, and the personalized details that make the experience special.</span></span>
+      </label>
+
+      <label class="level">
+        <input type="radio" name="level" data-amount="2000" data-name="A Full Series" value="$2,000 A FULL SERIES: Your gift covers the teacher, hospitality, printing, and the personalized details that make the six-week experience special.">
+        <span><span class="amt">$2,000</span><span class="name">A FULL SERIES</span><span class="desc">Your gift covers the teacher, hospitality, printing, and the personalized details that make the six-week experience special.</span></span>
+      </label>
+
+      <label class="level">
+        <input type="radio" name="level" data-amount="" data-name="Support Future Cohorts" value="SUPPORT FUTURE COHORTS: Amount of your choosing. A gift of any amount helps us keep creating thoughtful, high-quality Torah learning experiences like this one.">
+        <span><span class="amt">Your choice</span><span class="name">SUPPORT FUTURE COHORTS</span><span class="desc">A gift of any amount helps us keep creating thoughtful, high-quality Torah learning experiences like this one.</span><span class="money"><span>$</span><input type="number" id="customAmount" min="1" step="1" inputmode="numeric" placeholder="Amount" aria-label="Gift amount"></span></span>
+      </label>
+    </fieldset>
+
+    <div class="field">
+      <label class="q" for="name">Name <span class="req">*</span></label>
+      <input type="text" id="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label class="q" for="email">Email <span class="req">*</span></label>
+      <input type="email" id="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label class="q" for="phone">Phone <span class="req">*</span></label>
+      <input type="tel" id="phone" autocomplete="tel" required>
+    </div>
+
+    <div class="field">
+      <label class="q" for="honor">In someone’s honor?</label>
+      <p class="hint">Tell us the name of the individual and any other details you would like us to include in the sponsorship announcement.</p>
+      <textarea id="honor"></textarea>
+    </div>
+
+    <div class="field">
+      <label class="check"><input type="checkbox" id="anon"> <span>Yes, I would like to remain anonymous in the sponsorship announcement.</span></label>
+    </div>
+
+    <div id="paySection">
+      <div id="payChoose">
+        <h2 class="pay-h">How would you like to pay?</h2>
+        <p class="pay-sub">Cohort series and classes are sponsored on a first-come-first-serve basis. Once we receive your payment, we will be in touch to confirm the date(s) of the cohort session(s) you’re sponsoring.</p>
+        <a class="btn submit" id="venmoGo" href="https://venmo.com/" target="_blank" rel="noopener">Submit &amp; pay with Venmo</a>
+        <button type="button" class="btn ghost submit" id="zelleGo">Submit &amp; pay with Zelle</button>
+        <p class="err" id="err" role="alert"></p>
+      </div>
+
+      <div id="payDone" hidden aria-live="polite">
+        <h2 class="pay-h">Thank you!</h2>
+      <p class="pay-sub">Cohort series and classes are sponsored on a first-come-first-serve basis. Once we receive your payment, we will be in touch to confirm the date(s) of the cohort session(s) you’re sponsoring.</p>
+        <div class="pay" id="venmoDone" hidden>
+          <p><span id="venmoLead"></span> <strong class="amt-text"></strong> gift to <strong>@Rachel-Abboudi-1</strong> (Rachel Abboudi Barris).</p>
+          <a class="btn" id="venmoAgain" href="https://venmo.com/" target="_blank" rel="noopener">Open Venmo</a>
+        </div>
+        <div class="pay" id="zelleDone" hidden>
+          <p><span id="zelleLead"></span> <strong class="amt-text"></strong> to:</p>
+          <div class="zelle-row"><span class="zelle-id" id="zelleId"></span><button type="button" class="btn ghost" id="copyBtn">Copy</button></div>
+          <p class="copied" id="copied"></p>
+          <p class="memo">Please add “Cohort Series” in the memo.</p>
+        </div>
+        <p class="err" id="sendErr" role="alert"></p>
+        <p class="again">Questions? <a href="mailto:theafterhoursbeitmidrash@gmail.com" target="_blank" rel="noopener">theafterhoursbeitmidrash@gmail.com</a></p>
+      </div>
+    </div>
+  </form>
+</div>
+
+</main>
+
+<script>
+// ===== Payment details: fill these in =====
+var VENMO_USERNAME = "Rachel-Abboudi-1";   // without the @
+var ZELLE_ID = "rachelabboudi@gmail.com";       // the email or phone number your Zelle uses
+var ZELLE_NAME = "";       // the name donors see in Zelle
+// ==========================================
+
+var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfLQfDvmxAsvVvTxWH-DsQZB5gVpzh33-vmr3V2KlcVMNnOtQ/formResponse";
+var FIELDS = {
+  name: "entry.2085995568",
+  email: "entry.960783403",
+  phone: "entry.146124198",
+  honor: "entry.1793764923",
+  anon: "entry.258737619",
+  level: "entry.670192755",
+  amount: "entry.1426190880"
+};
+var ANON_VALUE = "Yes, I would like to remain anonymous";
+
+var form = document.getElementById("sponsorForm");
+var customAmount = document.getElementById("customAmount");
+var err = document.getElementById("err");
+var payChoose = document.getElementById("payChoose");
+var payDone = document.getElementById("payDone");
+var venmoDone = document.getElementById("venmoDone");
+var zelleDone = document.getElementById("zelleDone");
+var submitted = null;   // { amount, venmoUrl } once the form has been sent
+
+function selectedLevel() { return form.querySelector('input[name="level"]:checked'); }
+function val(id) { return document.getElementById(id).value.trim(); }
+
+// The amount box sits inside the "Your choice" card: typing in it picks that card.
+var customRadio = form.querySelector('input[name="level"][data-amount=""]');
+customAmount.addEventListener("focus", function () { customRadio.checked = true; });
+form.addEventListener("change", function (e) { if (e.target === customRadio) customAmount.focus(); });
+form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+// Checks the form; returns what was submitted, or null (with a message shown).
+function collect() {
+  err.textContent = "";
+  var level = selectedLevel();
+  var amount = level ? Math.round(Number(level.dataset.amount || customAmount.value.trim())) : 0;
+  var missing = [];
+  if (!level) missing.push("a sponsorship");
+  if (level && !(amount > 0)) missing.push("your gift amount");
+  if (!val("name")) missing.push("your name");
+  if (!/^\S+@\S+\.\S+$/.test(val("email"))) missing.push("a valid email");
+  if (!val("phone")) missing.push("your phone");
+  if (missing.length) { err.textContent = "Please add " + missing.join(", ") + "."; return null; }
+
+  var data = new URLSearchParams();
+  data.append(FIELDS.name, val("name"));
+  data.append(FIELDS.email, val("email"));
+  data.append(FIELDS.phone, val("phone"));
+  data.append(FIELDS.honor, val("honor"));
+  if (document.getElementById("anon").checked) data.append(FIELDS.anon, ANON_VALUE);
+  data.append(FIELDS.level, level.value);
+  data.append(FIELDS.amount, String(amount));
+
+  var note = "Cohort Series – " + level.dataset.name;
+  var venmoUrl = "https://venmo.com/?txn=pay&audience=private&recipients=" + encodeURIComponent(VENMO_USERNAME) +
+    "&amount=" + amount + "&note=" + encodeURIComponent(note);
+  return { data: data, amount: amount, venmoUrl: venmoUrl };
+}
+
+function send(info) {
+  submitted = info;
+  fetch(FORM_URL, { method: "POST", mode: "no-cors", body: info.data, keepalive: true })
+    .catch(function () {
+      document.getElementById("sendErr").textContent =
+        "We couldn’t record your form. Please email us at theafterhoursbeitmidrash@gmail.com so we have your details.";
+    });
+  form.querySelectorAll("input, textarea").forEach(function (el) { el.disabled = true; });
+  form.querySelectorAll("fieldset, .field").forEach(function (el) { el.classList.add("locked"); });
+  var amtText = "$" + info.amount.toLocaleString("en-US");
+  document.querySelectorAll(".amt-text").forEach(function (el) { el.textContent = amtText; });
+  document.getElementById("venmoAgain").href = info.venmoUrl;
+  document.getElementById("zelleId").textContent = ZELLE_ID;
+}
+
+// Shows the payment details in the same spot the buttons were, so nothing jumps.
+function show(method) {
+  payChoose.hidden = true;
+  payDone.hidden = false;
+  // Both options stay on screen; the one they picked comes first.
+  venmoDone.hidden = false;
+  zelleDone.hidden = false;
+  if (method === "zelle") venmoDone.parentNode.insertBefore(zelleDone, venmoDone);
+  else zelleDone.parentNode.insertBefore(venmoDone, zelleDone);
+  document.getElementById("venmoLead").textContent = method === "venmo"
+    ? "Venmo opened in a new tab to finish your" : "Prefer Venmo? Use the button below for your";
+  document.getElementById("venmoAgain").textContent = method === "venmo" ? "Open Venmo again" : "Pay with Venmo";
+  document.getElementById("zelleLead").textContent = method === "zelle"
+    ? "In your bank’s app, open Zelle and send" : "Prefer Zelle? In your bank’s app, send";
+}
+
+// Venmo is a real link so the new tab is never blocked; we point it at the
+// right payment just before the browser follows it.
+document.getElementById("venmoGo").addEventListener("click", function (e) {
+  var info = submitted || collect();
+  if (!info) { e.preventDefault(); return; }
+  this.href = info.venmoUrl;
+  if (!submitted) send(info);
+  show("venmo");
+});
+
+document.getElementById("zelleGo").addEventListener("click", function () {
+  var info = submitted || collect();
+  if (!info) return;
+  if (!submitted) send(info);
+  show("zelle");
+});
+
+// Reserve room for the payment details so the page never changes height.
+function reserveSpace() {
+  var section = document.getElementById("paySection");
+  if (submitted) return;
+  section.style.minHeight = "";
+  var tallest = payChoose.offsetHeight;
+  document.getElementById("zelleId").textContent = ZELLE_ID;
+  document.querySelectorAll(".amt-text").forEach(function (el) { el.textContent = "$0,000"; });
+  ["venmo", "zelle"].forEach(function (m) {
+    show(m);
+    tallest = Math.max(tallest, payDone.offsetHeight);
+  });
+  document.querySelectorAll(".amt-text").forEach(function (el) { el.textContent = ""; });
+  payDone.hidden = true; payChoose.hidden = false;
+  section.style.minHeight = tallest + "px";
+}
+reserveSpace();
+window.addEventListener("resize", reserveSpace);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserveSpace);
+
+document.getElementById("copyBtn").addEventListener("click", function () {
+  var copied = document.getElementById("copied");
+  var done = function () { copied.textContent = "Copied! Paste it into Zelle."; };
+  var fallback = function () {
+    var r = document.createRange();
+    r.selectNodeContents(document.getElementById("zelleId"));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    try { if (document.execCommand("copy")) { done(); return; } } catch (e) {}
+    copied.textContent = "Selected. Press Ctrl+C (or ⌘C) to copy.";
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(ZELLE_ID).then(done, fallback);
+  } else { fallback(); }
+});
+</script>
+</body>
+</html>
