@@ -163,3 +163,15 @@ button.btn { cursor: pointer; }
 .arch-photo figcaption { margin-top: 16px; font-style: italic; color: var(--sand); font-size: 1.05rem; }
 .story-photo.left { float: left; margin: 6px 28px 12px 0; }
 @media (max-width: 520px) { .story-photo.left { margin-right: 18px; margin-left: 0; } }
+
+/* About: table photo behind the title, fading into the page */
+.photo-hero {
+  min-height: 580px; display: flex; align-items: flex-end; justify-content: center; padding-block: 140px 44px;
+  background:
+    linear-gradient(to bottom, rgba(20, 17, 13, 0.30) 0%, rgba(20, 17, 13, 0.45) 40%, rgba(20, 17, 13, 0.82) 75%, var(--bg) 100%),
+    url("img/our-story-table.jpg") center 46% / cover no-repeat;
+}
+.photo-hero .eyebrow, .photo-hero h1 { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65); }
+.photo-hero .eyebrow { color: var(--cream); }
+.photo-hero h1 { font-size: clamp(2.6rem, 10vw, 3.6rem); }
+@media (max-width: 600px) { .photo-hero { min-height: 380px; padding-block: 90px 36px; background-position: center, center 50%; } }
