@@ -151,3 +151,5 @@ footer .small { font-size: 0.95rem; margin-top: 18px; }
 button.btn { cursor: pointer; }
 .event .honor { font-style: italic; color: var(--brass); font-size: 1.1rem; margin-top: 2px; }
 .card.person { align-self: start; }
+.story-photo { margin: 8px auto 32px; max-width: 520px; }
+.story-photo img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); }
