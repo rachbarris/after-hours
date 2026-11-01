@@ -149,3 +149,4 @@ footer .small { font-size: 0.95rem; margin-top: 18px; }
 .rsvp .thanks { font-size: 1.25rem; font-style: italic; }
 .btn:disabled { opacity: 0.7; cursor: default; }
 button.btn { cursor: pointer; }
+.event .honor { font-style: italic; color: var(--brass); font-size: 1.1rem; margin-top: 2px; }

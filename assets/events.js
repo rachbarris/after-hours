@@ -2,20 +2,22 @@
 // have passed drop off the site automatically. Leave a field as "" if it isn't
 // known yet.
 //
+// honor: shown under the title, e.g. "Rosh Chodesh Shevat" -> "In honor of Rosh Chodesh Shevat".
+//
 // rsvp: the Google Form behind the RSVP button, so people can RSVP right on the
 // page. "form" is the long id in the form's link; the entry numbers come from
 // the form's pre-filled link. Without rsvp, the button opens "signup" instead.
 var EVENTS = [
-  { date: "2027-01-06", title: "The Moonlight Shift", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
+  { date: "2027-01-06", title: "The Moonlight Shift", honor: "Rosh Chodesh Shevat", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSfNElEo0aXcuK4euMXVMAaMLesJJXpIqNvQEPLSXYO4Vs1Sdw/viewform",
     rsvp: { form: "1FAIpQLSfNElEo0aXcuK4euMXVMAaMLesJJXpIqNvQEPLSXYO4Vs1Sdw", name: "entry.1303972338", email: "entry.1117826406", first: "entry.2045363639", ideas: "entry.1792170449" } },
-  { date: "2027-02-03", title: "The Moonlight Shift", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
+  { date: "2027-02-03", title: "The Moonlight Shift", honor: "Rosh Chodesh Adar I", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSdroYDh65l5sYYlzgjzja9uuT6zIRcFZp5SdwzlmxNJdDXJtA/viewform" },
-  { date: "2027-03-09", title: "The Moonlight Shift", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
+  { date: "2027-03-09", title: "The Moonlight Shift", honor: "Rosh Chodesh Adar II", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSfjrwiLN5BxrI5WaneZUr41z2yXwZQ2zOM7t74SFUO3V0NeHw/viewform" },
-  { date: "2027-05-05", title: "The Moonlight Shift", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
+  { date: "2027-05-05", title: "The Moonlight Shift", honor: "Rosh Chodesh Iyar", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ/viewform" },
-  { date: "2027-06-02", title: "The Moonlight Shift", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
+  { date: "2027-06-02", title: "The Moonlight Shift", honor: "Rosh Chodesh Sivan", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg/viewform" }
 ];
 
@@ -85,6 +87,7 @@ var RSVP_IDEAS_QUESTION = "We are working hard to build programming that reflect
       '<div class="date-badge"><span class="mon">' + MONTHS[d.getMonth()] + '</span><span class="day">' + d.getDate() + "</span></div>" +
       "<div>" +
         "<h3>" + esc(e.title) + (e.topic ? ": " + esc(e.topic) : "") + "</h3>" +
+        (e.honor ? '<p class="honor">In honor of ' + esc(e.honor) + "</p>" : "") +
         '<p class="meta">' + lines.map(esc).join("<br>") + "</p>" +
         (e.kind ? '<p class="meta">' + esc(e.kind) + "</p>" : "") +
         (missing.length ? '<p class="todo">' + missing.join(", ") + "</p>" : "") +
