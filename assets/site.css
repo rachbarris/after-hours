@@ -161,3 +161,5 @@ button.btn { cursor: pointer; }
 .arch-photo { margin: 0 auto 36px; max-width: 280px; text-align: center; }
 .arch-photo img { width: 100%; height: auto; border-radius: 999px 999px 6px 6px; border: 1px solid var(--line); box-shadow: 0 0 0 6px var(--glow-mid), 0 0 0 7px var(--line); }
 .arch-photo figcaption { margin-top: 16px; font-style: italic; color: var(--sand); font-size: 1.05rem; }
+.story-photo.left { float: left; margin: 6px 28px 12px 0; }
+@media (max-width: 520px) { .story-photo.left { margin-right: 18px; margin-left: 0; } }
