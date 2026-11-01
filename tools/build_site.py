@@ -284,6 +284,11 @@ RACHELI_BIO = [
     "Outside the classroom, Racheli is a wife, mom, and Riverdale resident who knows firsthand how quickly adult life can crowd out the things we always meant to make time for. She co-founded The After Hours Beit Midrash because she believes that meaningful Torah learning shouldn’t be something we have to leave behind when life gets busy.",
 ]
 
+SHULI_BIO = [
+    "Shuli Taubes chairs the Jewish Philosophy Department at SAR High School in Riverdale, where she also teaches Tanakh and Jewish Identity and has developed curricula in comparative religion and Jewish sexual ethics for Modern Orthodox high school students. She holds a Master of Divinity from Harvard Divinity School and a BA in History from Barnard College, and brings both serious Torah learning and genuine curiosity about the wider world into her teaching. Shuli lectures in synagogues and adult education programs throughout North America.",
+    "Shuli believes that everyone should have the opportunity to find their own chelek in Torah, to discover the ideas, questions, and sources that speak to them and become part of their lives. She co-founded The After Hours Beit Midrash because she believes that Torah learning shouldn’t be confined to a particular stage of life. Its wisdom can meet us wherever we are, offering new ways to think, grow, and connect. Shuli lives with her family in Riverdale.",
+]
+
 page("team/index.html", "Our Team | The After Hours Beit Midrash", page_hero("Our team", "The people behind the Beit Midrash") + f'''
 
 <main>
@@ -291,7 +296,7 @@ page("team/index.html", "Our Team | The After Hours Beit Midrash", page_hero("Ou
     <div class="wrap">
       <div class="grid">
 {person("RB", "Racheli Barris", RACHELI_BIO)}
-{person("ST", "Shuli Taubes")}
+{person("ST", "Shuli Taubes", SHULI_BIO)}
       </div>
     </div>
   </section>
