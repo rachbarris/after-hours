@@ -18,7 +18,8 @@ var EVENTS = [
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSfjrwiLN5BxrI5WaneZUr41z2yXwZQ2zOM7t74SFUO3V0NeHw/viewform",
     rsvp: { form: "1FAIpQLSfjrwiLN5BxrI5WaneZUr41z2yXwZQ2zOM7t74SFUO3V0NeHw", name: "entry.1303972338", email: "entry.1117826406", first: "entry.2045363639", ideas: "entry.1792170449" } },
   { date: "2027-05-05", title: "The Moonlight Shift", honor: "Rosh Chodesh Iyar", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
-    signup: "https://docs.google.com/forms/d/e/1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ/viewform" },
+    signup: "https://docs.google.com/forms/d/e/1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ/viewform",
+    rsvp: { form: "1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ", name: "entry.1303972338", email: "entry.1117826406", first: "entry.2045363639", ideas: "entry.1792170449" } },
   { date: "2027-06-02", title: "The Moonlight Shift", honor: "Rosh Chodesh Sivan", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg/viewform" }
 ];
