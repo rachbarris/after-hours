@@ -269,12 +269,13 @@ page("about/index.html", "Our Story | The After Hours Beit Midrash", page_hero("
 </main>''', "How two high school Torah teachers started The After Hours Beit Midrash around a dining room table in Riverdale.")
 
 # ---------------- Team ----------------
-def person(initials, name, bio=None):
+def person(initials, name, bio=None, photo=None):
+    # photo: an image in assets/img/ (e.g. "racheli.jpg"); no photo shows no circle at all
+    photo_html = (f'          <img class="photo" src="{{up}}assets/img/{photo}" alt="{name}">\n' if photo else "")
     # bio: list of paragraphs; cards without one show just the name and role
     paras = "\n".join(f"          <p>{p}</p>" for p in bio) if bio else ""
     return f'''        <div class="card person">
-          <div class="photo" aria-hidden="true">{initials}</div>
-          <h3>{name}</h3>
+{photo_html}          <h3>{name}</h3>
           <p class="role">Co-founder · Judaic Studies Teacher at SAR High School</p>
 {paras}
         </div>'''
