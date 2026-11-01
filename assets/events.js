@@ -2,7 +2,7 @@
 // have passed drop off the site automatically. Leave a field as "" if it isn't
 // known yet.
 var EVENTS = [
-  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "https://docs.google.com/forms/d/e/1FAIpQLSfNElEo0aXcuK4euMXVMAaMLesJJXpIqNvQEPLSXYO4Vs1Sdw/viewform" },
   { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
   { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
   { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
