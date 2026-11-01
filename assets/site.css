@@ -151,7 +151,10 @@ footer .small { font-size: 0.95rem; margin-top: 18px; }
 button.btn { cursor: pointer; }
 .event .honor { font-style: italic; color: var(--brass); font-size: 1.1rem; margin-top: 2px; }
 .card.person { align-self: start; }
-.story-photo { margin: 4px auto 32px; max-width: 240px; }  /* small enough that the sheet reads as texture, not text */
+/* Floats beside the paragraph after the dining-room line, small enough that the sheet reads as texture */
+.story-photo { float: right; width: 220px; max-width: 46%; margin: 6px 0 12px 28px; }
+.story .pull, .story .signoff { clear: both; }
+@media (max-width: 520px) { .story-photo { width: 150px; margin-left: 18px; } }
 .story-photo img { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); }
 
 /* Home: arched photo in the opening section */
