@@ -25,27 +25,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline
 img { max-width: 100%; display: block; }
 [hidden] { display: none !important; }
 
-/* ---------- Draft notice (removed at launch) ---------- */
-.draft-banner { background: var(--brass); color: var(--bg); text-align: center; font-size: 0.95rem; font-weight: 700; padding: 6px 16px; }
-
-/* ---------- Top menu ---------- */
-.nav { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
-.nav-inner { max-width: 1040px; margin: 0 auto; padding: 10px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cream); font-weight: 600; font-size: 1.15rem; line-height: 1.1; }
-.brand svg { width: 34px; height: auto; color: var(--cream); flex: none; }
-.nav-links { display: flex; align-items: center; gap: 4px 20px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; color: var(--sand); font-size: 1.08rem; }
-.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cream); }
-.nav-links a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--brass); }
-.nav-links .nav-cta { color: var(--bg); background: var(--cream); border-radius: 4px; padding: 6px 14px; font-weight: 700; }
-.nav-links .nav-cta:hover { color: var(--bg); }
-.menu-btn { display: none; font: inherit; font-weight: 700; color: var(--cream); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 6px 14px; cursor: pointer; }
-@media (max-width: 860px) {
-  .menu-btn { display: inline-block; }
-  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; padding: 8px 22px 18px; gap: 12px; }
-  .nav.open .nav-links { display: flex; }
-}
-
 /* ---------- Page header ---------- */
 .hero { text-align: center; background: radial-gradient(ellipse 85% 70% at 50% 28%, var(--glow) 0%, var(--glow-mid) 42%, var(--bg) 78%); padding: 36px 22px 56px; }
 .hero-inner { max-width: 620px; margin: 0 auto; }
@@ -108,18 +87,6 @@ h3 { font-size: 1.6rem; font-weight: 600; line-height: 1.15; }
 .event .meta { color: var(--sand); font-size: 1.05rem; margin-top: 4px; }
 .event .btn { margin-top: 12px; }
 .events-list { display: grid; gap: 18px; margin-top: 22px; }
-
-/* Draft placeholders: anything still waiting for content */
-.todo { border: 1px dashed var(--brass); border-radius: 6px; padding: 12px 14px; color: var(--brass); font-style: italic; font-size: 1.05rem; }
-.todo::before { content: "To fill in: "; font-weight: 700; font-style: normal; }
-p.todo + p, .todo + .todo { margin-top: 10px; }
-
-/* ---------- Footer ---------- */
-footer { border-top: 1px solid var(--line); text-align: center; color: var(--sand); font-size: 1.1rem; padding: 40px 22px 56px; }
-footer .tag { font-style: italic; color: var(--cream); font-size: 1.35rem; margin-bottom: 10px; }
-.reach { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px; }
-.reach a { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; text-decoration: none; border: 1px solid var(--cream); border-radius: 4px; padding: 10px 20px; min-height: 46px; }
-footer .small { font-size: 0.95rem; margin-top: 18px; }
 
 /* Our story */
 .story p { text-wrap: pretty; }

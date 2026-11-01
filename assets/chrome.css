@@ -1,0 +1,30 @@
+/* Menu, footer and draft notice, shared by every page (including the sponsorship pages,
+   which keep their own styles otherwise). Uses the same color names as the pages. */
+/* ---------- Draft notice (removed at launch) ---------- */
+.draft-banner { background: var(--brass); color: var(--bg); text-align: center; font-size: 0.95rem; font-weight: 700; padding: 6px 16px; }
+
+/* ---------- Top menu ---------- */
+.nav { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
+.nav-inner { max-width: 1040px; margin: 0 auto; padding: 10px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cream); font-weight: 600; font-size: 1.15rem; line-height: 1.1; }
+.brand svg { width: 34px; height: auto; color: var(--cream); flex: none; }
+.nav-links { display: flex; align-items: center; gap: 4px 20px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--sand); font-size: 1.08rem; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cream); }
+.nav-links a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--brass); }
+.nav-links .nav-cta { color: var(--bg); background: var(--cream); border-radius: 4px; padding: 6px 14px; font-weight: 700; }
+.nav-links .nav-cta:hover { color: var(--bg); }
+.menu-btn { display: none; font: inherit; font-weight: 700; color: var(--cream); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 6px 14px; cursor: pointer; }
+@media (max-width: 860px) {
+  .menu-btn { display: inline-block; }
+  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--bg); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; padding: 8px 22px 18px; gap: 12px; }
+  .nav.open .nav-links { display: flex; }
+}
+
+/* ---------- Footer ---------- */
+footer { border-top: 1px solid var(--line); text-align: center; color: var(--sand); font-size: 1.1rem; padding: 40px 22px 56px; }
+footer .tag { font-style: italic; color: var(--cream); font-size: 1.35rem; margin-bottom: 10px; }
+.reach { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px; }
+.reach a { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; text-decoration: none; border: 1px solid var(--cream); border-radius: 4px; padding: 10px 20px; min-height: 46px; }
+footer .small { font-size: 0.95rem; margin-top: 18px; }
+
