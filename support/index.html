@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Support | The After Hours Beit Midrash</title>
+<meta name="description" content="Sponsor a cohort or a Moonlight Shift, or become an After Hours Partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="draft-banner">Draft preview: not yet published</div>
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <svg class="" viewBox="0 0 160 150" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="80" y1="0" x2="80" y2="50"/>
+      <path d="M73 50h14v10H73z"/>
+      <path d="M80 60C52 60 40 94 22 118h116C120 94 108 60 80 60Z"/>
+      <path d="M22 118Q80 132 138 118"/>
+      <path d="M68 123Q80 140 92 123"/>
+    </svg>
+      <span>The After Hours<br>Beit Midrash</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/index.html">About</a></li>
+      <li><a href="../team/index.html">Our Team</a></li>
+      <li><a href="../teachers/index.html">Teachers</a></li>
+      <li><a href="../programs/index.html">Programs</a></li>
+      <li><a href="../events/index.html">Upcoming</a></li>
+      <li><a href="../contact/index.html">Contact</a></li>
+      <li><a class="nav-cta" href="../support/index.html" aria-current="page">Support us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero page-hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Support us</p>
+    <h1>Your gift is how we keep the standard high.</h1>
+  </div>
+</header>
+
+<main>
+  <section class="block">
+    <div class="narrow prose center">
+      <p>It allows us to keep the learning exceptional, the commitment manageable, and the door open for the next woman who’s been looking for a way back in.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2 class="center">What you can support</h2>
+      <div class="grid">
+        <div class="card center">
+          <svg class="minilamp card-icon" viewBox="0 0 160 150" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="80" y1="0" x2="80" y2="50"/>
+      <path d="M73 50h14v10H73z"/>
+      <path d="M80 60C52 60 40 94 22 118h116C120 94 108 60 80 60Z"/>
+      <path d="M22 118Q80 132 138 118"/>
+      <path d="M68 123Q80 140 92 123"/>
+    </svg>
+          <h3>The Cohort Series</h3>
+          <p class="kicker">Serious, text-based learning over four to six weeks.</p>
+          <p class="muted">A small group, a substantial topic, and a commitment that actually feels manageable. We plan to offer a new cohort each season.</p>
+          <a class="btn" href="../cohort/index.html">Sponsor a cohort</a>
+        </div>
+        <div class="card center">
+          <svg class="moon card-icon" viewBox="0 0 120 120" aria-hidden="true">
+      <defs>
+        <radialGradient id="mg" cx="65%" cy="40%" r="80%"><stop offset="0" stop-color="#f3e9d3"/><stop offset="1" stop-color="#a99a7b"/></radialGradient>
+        <mask id="mm"><rect width="120" height="120" fill="#fff"/><circle cx="44" cy="50" r="46" fill="#000"/></mask>
+      </defs>
+      <circle cx="68" cy="62" r="46" fill="url(#mg)" mask="url(#mm)"/>
+    </svg>
+          <h3>The Moonlight Shift</h3>
+          <p class="kicker">A monthly evening of Torah.</p>
+          <p class="muted">For women who want more Torah in their lives but can’t commit to a full cohort. Help us keep this experience free and open to all who are interested.</p>
+          <a class="btn" href="../moonlight/index.html">Sponsor a Moonlight Shift</a>
+        </div>
+        <div class="card center">
+          <h3>After Hours Partner</h3>
+          <p class="kicker">A general gift to the cause.</p>
+          <p class="muted">Not tied to a single evening. It supports the whole of what we are building: the cohorts, the Moonlight Shift, and the learning still to come.</p>
+          <a class="btn" href="../partner/index.html">Become a partner</a>
+        </div>
+      </div>
+      <p class="center muted" style="margin-top:28px">Once we receive your gift, we will be in touch to confirm the date of the event you are sponsoring.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="tag">Meaningful Torah learning, after hours.</p>
+  <p>Riverdale, NY · Questions? Reach out any time.</p>
+  <div class="reach">
+    <a href="https://www.instagram.com/theafterhoursbeitmidrash/" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:theafterhoursbeitmidrash@gmail.com">Email us</a>
+  </div>
+  <p class="small">The After Hours Beit Midrash is an independently operated educational initiative and is not a registered 501(c)(3) nonprofit.</p>
+</footer>
+
+<script>
+var nav = document.querySelector(".nav"), btn = document.querySelector(".menu-btn");
+btn.addEventListener("click", function () {
+  var open = nav.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+});
+</script>
+</body>
+</html>

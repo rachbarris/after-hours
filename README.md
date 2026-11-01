@@ -1,10 +1,13 @@
-# The After Hours Beit Midrash: donation pages
+# The After Hours Beit Midrash: website
 
-Live site: https://rachbarris.github.io/after-hours/
+Live site: https://www.theafterhoursbeitmidrash.com (published from `main`)
 
-- `index.html`: main page
-- `moonlight/`: Sponsor a Moonlight Shift
-- `cohort/`: Sponsor the Cohort Series
-- `partner/`: Become an After Hours Partner
+The `new-site` branch is the full site in progress (draft, not published):
 
-Each sponsorship form saves to its Google Form, then offers Venmo (amount and note filled in) or Zelle.
+- `index.html`: home
+- `about/`, `team/`, `teachers/`, `programs/`, `events/`, `contact/`
+- `support/`: donation overview, linking to the sponsorship forms
+- `moonlight/`, `cohort/`, `partner/`: sponsorship forms (save to Google Forms, then offer Venmo or Zelle)
+- `assets/site.css`: shared styles
+
+Dashed "To fill in" boxes mark content still to come. The yellow draft banner comes off at launch.
