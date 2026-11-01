@@ -2,8 +2,6 @@
 
 Live site: https://www.theafterhoursbeitmidrash.com (published from `main`)
 
-The `new-site` branch is the full site in progress (draft, not published yet).
-
 ## Where things live
 
 - `index.html`: home

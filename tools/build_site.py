@@ -8,7 +8,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 ROOT = os.path.join(HERE, "..") + "/"
-DRAFT = True  # shows the "Draft preview" banner; set False at launch
+DRAFT = False  # set True to show the "Draft preview" banner on every page
 
 LAMP = '''<svg class="{cls}" viewBox="0 0 160 150" fill="none" stroke="currentColor" stroke-width="{w}" stroke-linecap="round" stroke-linejoin="round" {aria}>
       <line x1="80" y1="0" x2="80" y2="50"/>
