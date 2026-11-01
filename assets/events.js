@@ -34,9 +34,11 @@ var EVENTS = [
 
   function card(e) {
     var d = parse(e.date);
-    var meta = [DAYS[d.getDay()] + ", " + d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })];
-    if (e.time) meta.push(e.time);
-    if (e.place) meta.push(e.place);
+    // One detail per line, so phrases like "(home by 9!)" never split awkwardly.
+    var lines = [DAYS[d.getDay()] + ", " + d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })];
+    if (e.time) lines.push(e.time);
+    if (e.place) lines.push(e.place);
+    if (e.teacher) lines.push("With " + e.teacher);
     var missing = [];
     if (!e.time) missing.push("time");
     if (!e.place) missing.push("location");
@@ -47,8 +49,7 @@ var EVENTS = [
       '<div class="date-badge"><span class="mon">' + MONTHS[d.getMonth()] + '</span><span class="day">' + d.getDate() + "</span></div>" +
       "<div>" +
         "<h3>" + esc(e.title) + (e.topic ? ": " + esc(e.topic) : "") + "</h3>" +
-        '<p class="meta">' + esc(meta.join(" · ")) + "</p>" +
-        (e.teacher ? '<p class="meta">With ' + esc(e.teacher) + "</p>" : "") +
+        '<p class="meta">' + lines.map(esc).join("<br>") + "</p>" +
         (e.kind ? '<p class="meta">' + esc(e.kind) + "</p>" : "") +
         (missing.length ? '<p class="todo">' + missing.join(", ") + "</p>" : "") +
         (e.signup ? '<a class="btn" href="' + esc(e.signup) + '" target="_blank" rel="noopener">RSVP</a>' : "") +
