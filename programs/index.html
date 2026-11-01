@@ -109,6 +109,14 @@ menuBtn.addEventListener("click", function () {
   var open = nav.classList.toggle("open");
   menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
 });
+// Start at the top after following a link (Back still returns to where you were).
+(function () {
+  var navType = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+  if (!location.hash && navType && navType.type === "navigate") {
+    window.scrollTo(0, 0);
+    try { document.documentElement.scrollIntoView({ block: "start" }); } catch (e) {}
+  }
+})();
 </script>
 </body>
 </html>
