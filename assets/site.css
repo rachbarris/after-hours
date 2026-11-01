@@ -23,6 +23,7 @@ h1, h2, h3, p { margin: 0; }
 a { color: var(--cream); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
 img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
 
 /* ---------- Draft notice (removed at launch) ---------- */
 .draft-banner { background: var(--brass); color: var(--bg); text-align: center; font-size: 0.95rem; font-weight: 700; padding: 6px 16px; }
@@ -127,3 +128,24 @@ footer .small { font-size: 0.95rem; margin-top: 18px; }
 .signoff { margin-top: 28px; text-align: center; }
 .signoff .names { display: block; font-size: 1.6rem; font-style: italic; }
 .signoff .title { display: block; color: var(--sand); font-size: 1.05rem; letter-spacing: 0.04em; }
+
+/* RSVP form inside an event card */
+.rsvp { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 4px; }
+.rsvp form { display: grid; gap: 16px; }
+.rsvp .field { border: 0; padding: 0; margin: 0; min-width: 0; }
+.rsvp .q { display: block; font-weight: 600; font-size: 1.12rem; line-height: 1.35; margin-bottom: 6px; padding: 0; }
+.rsvp .req { color: var(--brass); }
+.rsvp input[type=text], .rsvp input[type=email], .rsvp textarea {
+  width: 100%; font: inherit; font-size: 1.1rem; color: var(--cream); background: #1d1913;
+  border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; min-height: 46px;
+}
+.rsvp textarea { min-height: 96px; resize: vertical; }
+.rsvp input:focus, .rsvp textarea:focus { outline: 2px solid var(--brass); outline-offset: 1px; border-color: var(--brass); }
+.rsvp .choice { display: inline-flex; align-items: center; gap: 8px; margin-right: 22px; cursor: pointer; }
+.rsvp .choice input { width: 20px; height: 20px; accent-color: var(--brass); }
+.rsvp .btn { justify-self: start; margin-top: 0; }
+.rsvp .err { color: #e8a28a; font-size: 1.05rem; }
+.rsvp .err:empty { display: none; }
+.rsvp .thanks { font-size: 1.25rem; font-style: italic; }
+.btn:disabled { opacity: 0.7; cursor: default; }
+button.btn { cursor: pointer; }
