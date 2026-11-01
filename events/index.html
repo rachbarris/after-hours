@@ -49,25 +49,9 @@
 <main>
   <section class="block">
     <div class="narrow">
-      <div class="events-list">
-        <div class="card event">
-          <div class="date-badge"><span class="mon">DEC</span><span class="day">10</span></div>
-          <div>
-            <h3>Moonlight Shift: topic</h3>
-            <p class="meta">Moonlight Shift · Time · Location · Teacher</p>
-            <p class="todo">real event details and a sign-up link (this is a sample)</p>
-          </div>
-        </div>
-        <div class="card event">
-          <div class="date-badge"><span class="mon">JAN</span><span class="day">12</span></div>
-          <div>
-            <h3>Winter Cohort: topic</h3>
-            <p class="meta">Cohort Series, 6 weeks · Time · Location · Teacher</p>
-            <p class="todo">real event details and a sign-up link (this is a sample)</p>
-          </div>
-        </div>
-      </div>
-      <p class="todo" style="margin-top:22px">decide whether events come from a Google Sheet you edit yourself, or you send changes to Claude.</p>
+      <div class="events-list" id="events-list"></div>
+      <script src="../assets/events.js"></script>
+      <p class="todo" style="margin-top:22px">upcoming Cohort Series dates, and whether events should come from a Google Sheet you edit yourself.</p>
     </div>
   </section>
 </main>
