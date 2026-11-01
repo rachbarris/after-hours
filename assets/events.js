@@ -2,11 +2,11 @@
 // have passed drop off the site automatically. Leave a field as "" if it isn't
 // known yet.
 var EVENTS = [
-  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "", teacher: "", topic: "", signup: "" },
-  { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "", teacher: "", topic: "", signup: "" },
-  { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "", teacher: "", topic: "", signup: "" },
-  { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "", teacher: "", topic: "", signup: "" },
-  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "", teacher: "", topic: "", signup: "" }
+  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" }
 ];
 
 (function () {
@@ -42,7 +42,7 @@ var EVENTS = [
     if (!e.place) missing.push("location");
     if (!e.teacher) missing.push("teacher");
     if (!e.topic) missing.push("topic");
-    if (!e.signup) missing.push("sign-up link");
+    if (!e.signup) missing.push("RSVP link");
     return '<div class="card event">' +
       '<div class="date-badge"><span class="mon">' + MONTHS[d.getMonth()] + '</span><span class="day">' + d.getDate() + "</span></div>" +
       "<div>" +
@@ -51,7 +51,7 @@ var EVENTS = [
         (e.teacher ? '<p class="meta">With ' + esc(e.teacher) + "</p>" : "") +
         (e.kind ? '<p class="meta">' + esc(e.kind) + "</p>" : "") +
         (missing.length ? '<p class="todo">' + missing.join(", ") + "</p>" : "") +
-        (e.signup ? '<a class="btn" href="' + esc(e.signup) + '" target="_blank" rel="noopener">Sign up</a>' : "") +
+        (e.signup ? '<a class="btn" href="' + esc(e.signup) + '" target="_blank" rel="noopener">RSVP</a>' : "") +
       "</div></div>";
   }
 
