@@ -150,3 +150,4 @@ footer .small { font-size: 0.95rem; margin-top: 18px; }
 .btn:disabled { opacity: 0.7; cursor: default; }
 button.btn { cursor: pointer; }
 .event .honor { font-style: italic; color: var(--brass); font-size: 1.1rem; margin-top: 2px; }
+.card.person { align-self: start; }

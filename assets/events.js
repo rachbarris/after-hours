@@ -78,12 +78,6 @@ var RSVP_IDEAS_QUESTION = "We are working hard to build programming that reflect
     if (e.time) lines.push(e.time);
     if (e.place) lines.push(e.place);
     if (e.teacher) lines.push("With " + e.teacher);
-    var missing = [];
-    if (!e.time) missing.push("time");
-    if (!e.place) missing.push("location");
-    if (!e.teacher) missing.push("teacher");
-    if (!e.topic) missing.push("topic");
-    if (!e.signup && !e.rsvp) missing.push("RSVP link");
     var button = e.rsvp
       ? '<button type="button" class="btn rsvp-open" aria-expanded="false" aria-controls="' + id + '">RSVP</button>'
       : e.signup ? '<a class="btn" href="' + esc(e.signup) + '" target="_blank" rel="noopener">RSVP</a>' : "";
@@ -94,7 +88,6 @@ var RSVP_IDEAS_QUESTION = "We are working hard to build programming that reflect
         (e.honor ? '<p class="honor">In honor of ' + esc(e.honor) + "</p>" : "") +
         '<p class="meta">' + lines.map(esc).join("<br>") + "</p>" +
         (e.kind ? '<p class="meta">' + esc(e.kind) + "</p>" : "") +
-        (missing.length ? '<p class="todo">' + missing.join(", ") + "</p>" : "") +
         button +
       "</div>" +
       (e.rsvp ? rsvpForm(e, id) : "") +
