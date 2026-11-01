@@ -2,11 +2,11 @@
 // have passed drop off the site automatically. Leave a field as "" if it isn't
 // known yet.
 var EVENTS = [
-  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
-  { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
-  { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
-  { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" },
-  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Riverdale, address shared upon RSVP", teacher: "", topic: "", signup: "" }
+  { date: "2027-01-06", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" },
+  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" }
 ];
 
 (function () {
