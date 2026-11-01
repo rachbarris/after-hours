@@ -6,7 +6,7 @@ var EVENTS = [
   { date: "2027-02-03", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "https://docs.google.com/forms/d/e/1FAIpQLSdroYDh65l5sYYlzgjzja9uuT6zIRcFZp5SdwzlmxNJdDXJtA/viewform" },
   { date: "2027-03-09", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "https://docs.google.com/forms/d/e/1FAIpQLSfjrwiLN5BxrI5WaneZUr41z2yXwZQ2zOM7t74SFUO3V0NeHw/viewform" },
   { date: "2027-05-05", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "https://docs.google.com/forms/d/e/1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ/viewform" },
-  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "" }
+  { date: "2027-06-02", title: "The Moonlight Shift", kind: "Monthly evening of Torah", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "", signup: "https://docs.google.com/forms/d/e/1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg/viewform" }
 ];
 
 (function () {
