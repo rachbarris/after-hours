@@ -280,7 +280,8 @@ def person(initials, name, bio=None):
         </div>'''
 
 RACHELI_BIO = [
-    "Racheli Barris is a Tanakh educator at SAR High School, where she spends her days helping teenagers discover that Torah texts are far more interesting, complicated, and relevant than they might have expected. She studied at Yeshiva University’s Graduate Program in Advanced Talmudic Studies (GPATS) and Bernard Revel Graduate School, and brings years of serious Torah learning and classroom experience to her teaching. Racheli believes that excellent Torah learning should be intellectually challenging, genuinely enjoyable, and full of opportunities for people to bring their own ideas and experiences into the room.",
+    "Racheli Barris is a Tanakh educator at SAR High School, where she spends her days helping teenagers discover that Torah texts are far more interesting, complicated, and relevant than they might have expected. She studied at Yeshiva University’s Graduate Program in Advanced Talmudic Studies (GPATS) and Bernard Revel Graduate School, and brings years of serious Torah learning and classroom experience to her teaching.",
+    "In addition to teaching in high school, Racheli frequently teaches adult classes and has been invited to speak at synagogues and community learning programs. She loves to share her love of Torah with learners well beyond the high school classroom. Racheli believes that excellent Torah learning should be intellectually challenging, genuinely enjoyable, and full of opportunities for people to bring their own ideas and experiences into the room.",
     "Outside the classroom, Racheli is a wife, mom, and Riverdale resident who knows firsthand how quickly adult life can crowd out the things we always meant to make time for. She co-founded The After Hours Beit Midrash because she believes that meaningful Torah learning shouldn’t be something we have to leave behind when life gets busy.",
 ]
 
