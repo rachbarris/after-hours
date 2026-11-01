@@ -21,7 +21,8 @@ var EVENTS = [
     signup: "https://docs.google.com/forms/d/e/1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ/viewform",
     rsvp: { form: "1FAIpQLSffME9RO_u529XfGFLcpwQI-F5alxdQpmwnQNYJUXDubCcEGQ", name: "entry.1303972338", email: "entry.1117826406", first: "entry.2045363639", ideas: "entry.1792170449" } },
   { date: "2027-06-02", title: "The Moonlight Shift", honor: "Rosh Chodesh Sivan", kind: "", time: "8:00pm-8:50pm (home by 9!)", place: "Address shared upon RSVP", teacher: "", topic: "",
-    signup: "https://docs.google.com/forms/d/e/1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg/viewform" }
+    signup: "https://docs.google.com/forms/d/e/1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg/viewform",
+    rsvp: { form: "1FAIpQLSdRanKZAVebIeqGi52Hjha5AVwagm1NCZQG-h98IRyRJ7SaTg", name: "entry.1303972338", email: "entry.1117826406", first: "entry.2045363639", ideas: "entry.1792170449" } }
 ];
 
 var RSVP_THANKS = "You’re in! We’ll send location information closer to the date. After all, we’re always home by 9.";
